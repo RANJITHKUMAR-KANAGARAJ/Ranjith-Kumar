@@ -1,15 +1,19 @@
 class Solution {
-    public boolean isPalindrome(int num) {
-        int ans = 0;
-        int res=num;
-        while(num>0){
-        int rem = num%10;
-        num = num/10;
-        ans=ans*10+rem;
+    public boolean isPalindrome(int x) {
+        if(x<0){
+            return false; 
         }
-        if(ans==res){
-        return true;
+        int a=0;
+        int s =x;
+        while(x!=0){
+            a = a*10+(x%10);
+            x = x/10;
         }
-       return false;
+        if(a==s){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
